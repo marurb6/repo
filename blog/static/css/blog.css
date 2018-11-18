@@ -1,0 +1,34 @@
+﻿body{
+   	font-size: 20px;
+   	font-family: Comis Sans, Verdana, sans-serif;
+   	color: #6377FF;
+	background-color: #99D4F7;	
+    	text-align: left;
+}
+h1 {
+    color: #FCA205;
+}
+span{
+	float:left;
+}
+div{
+	font-size: 15px;
+	float:right;
+		
+}
+footer{
+	position:fixed;
+	bottom:0px;
+	background-color: #99D4F7;
+}
+/* formatowanie tytułów */
+#tytul{
+	font-size: 30px;
+	color:white;
+	font-style: italic;
+}
+#formularz{
+	font-size: 30px;
+	color:white;
+	font-style: italic;
+}	

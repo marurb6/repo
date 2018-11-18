@@ -1,0 +1,96 @@
+﻿{% extends 'blog/bazowy.html' %}
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<title>PUT Motorsport</title>
+       	<meta charset="UTF-8">
+<script>
+/*
+The code below will change
+the paragraph with id = "formularz"
+in my web page:
+*/
+function zmianaFormularz() {
+	document.getElementById("formularz").innerHTML = "WYPEŁNIJ FORMULARZ I ROZPOCZNIJ PRZYGODĘ!";
+}
+</script>
+<script>
+// The code show pictures:
+            var i = 1;
+            var ktoryzkolei = 3;
+ 
+            function ktory(){
+                var clipart = i + ".svg";
+                document.getElementById("nr").value = clipart;
+                document.getElementById("migacz").src = clipart;
+			
+                if (i == ktoryzkolei)
+                    i = 1;    
+                else
+                    i++;
+            }
+        </script>
+	</head>	
+	<body>
+{% block content %}
+		<header><a id="tytul">Formula Student</a> to seria międzynarodowych zawodów, organizowanych od 1979 roku przez organizację SAE International.
+Co roku w zmaganiach biorą udział studenci uczelni z całego świata, którzy podczas konkurencji statycznych oraz dynamicznych prezentują samodzielnie zaprojektowane i zbudowane konstrukcje. Obecnie świat Formuły Student zasila ponad 600 zespołów, corocznie aktywnie uczestniczących w zawodach - zarówno z bolidami o napędzie spalinowym, jak i elektrycznym.</header>
+		<span><a id="tytul">PUT Motorsport</a> to wyspecjalizowani w różnych dziedzinach studenci Politechniki Poznańskiej, tworzący zgrany team dzięki dobrej komunikacji i dążeniu do wspólnego celu, pokonujący razem granice, których nie byliby w stanie przekroczyć działając osobno.
+		
+		Na koncie mają już 4 zbudowane bolidy: 
+		<ul><p>
+			<li><a id="tytul">Bolidy:</a>
+				<ol>
+				<li>Warta</li>
+   				<li>Wilda</li>
+    				<li>Cybina</li>
+   				<li>Maria</li>
+				</ol>
+        		
+		</ul></span>
+    			
+	
+
+		<img src="zespol.jpg" width=600px alt="Zdjęcie zespołu PUT Motorsport" title="PUT Motorsport">
+		
+
+<div><p id="formularz">Chcesz dołączyć do PUT Motorsport?</p>
+
+<button type="button" onclick="zmianaFormularz()">Tak!!!</button>
+<form enctype="text/plain" action="mailto:maniau96@onet.eu?subject=PUTMOTORSPORT" method="post"><br>
+    		Imię:
+     		<br>
+     		<input type="text" name="firstname" value="">
+     		<br>
+     		Nazwisko:<br>
+    		<input type="text" name="lastname" value="">
+		<br>
+		Kierunek studiów:<br>
+    		<input type="text" name="lastname" value="">
+		<br>
+       		Dlaczego chcesz dołączyć do PUT Motorsport?
+        	<br>
+       		<textarea name="content" rows="12" cols="30"></textarea>
+    		<p><input type="submit" value="Wyślij">
+		<input type="reset" value="Anuluj">
+		</p></form></div>
+		
+		<table border="5" bgcolor=#99D4F7>
+			<caption><a id="tytul">Dane techniczne</a></caption>
+			<tr><th>Bolid</th><th>Data rozpoczęcia projektu</th><th>Pierwsze uruchomienie pojazdu</th><th>Rozkład masy (z kierowcą 68kg)</th><th>Rozstaw osi</th><th>Rozstaw kół przód/tył</th><th>Wysokość środka ciężkości</th><th>Prędkość maksymalna</th></tr>
+			<tr><th>Warta</th><td>04.2014</td><td>07.2015</td><td>50/50</td><td>1530 mm</td><td>1300/1250 mm</td><td>325 mm</td><td>102 km/h</td></tr>
+			<tr><th>Wilda</th><td>09.2015</td><td>07.2016</td><td>47/53</td><td>1550 mm</td><td>1160/1150 mm</td><td>295 mm</td><td>100 km/h</td></tr>
+			<tr><th>Cybina</th><td>09.2016</td><td>06.2017</td><td>47/53</td><td>1530 mm</td><td>1160/1160 mm</td><td>315 mm</td><td>102 km/h</td></tr>
+			<tr><th>Maria</th><td>09.2017</td><td>06.2018</td><td>47/53</td><td>1530 mm</td><td>1160/1160 mm</td><td>315 mm</td><td>126 km/h</td></tr>
+		</table>
+<div id="tytul">Kliknij na obrazek!
+        <p><img src="bolid.svg" height=100px id="migacz" onclick="ktory()"/></p>
+  	<p><input type="text" id="nr" value="Który to obrazek?"/></p></div>
+
+		<footer>Więcej informacji na <a href="https://web.facebook.com/put.motorsport/"> facebook-u</a> i <a href="http://www.motorsport.put.poznan.pl">stronie internetowej.</footer>
+
+
+{% endblock content %}
+
+	</body>
+</html>
